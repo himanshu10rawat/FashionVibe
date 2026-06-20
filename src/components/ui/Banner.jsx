@@ -69,23 +69,32 @@ export default function Banner() {
 
   return (
     <div className="w-full">
-      <Carousel setApi={setApi} plugins={plugins} className="w-full">
-        <CarouselContent>
+      <Carousel
+        setApi={setApi}
+        plugins={plugins}
+        className="w-full px-2 md:px-0"
+      >
+        <CarouselContent className="ml-0 md:ml-auto">
           {banners.map(({ src, alt }, index) => (
-            <CarouselItem key={src} className={"relative w-full h-100"}>
+            <CarouselItem
+              key={src}
+              className={
+                "relative h-25 w-full overflow-hidden md:overflow-auto rounded-2xl md:rounded-none pl-0 md:h-100"
+              }
+            >
               <Image
                 src={src}
                 alt={alt}
                 fill
-                sizes="100vw"
+                sizes="100%"
                 preload={index === 0}
                 className="object-cover"
               />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4 h-10 w-10" />
-        <CarouselNext className="right-4 h-10 w-10" />
+        <CarouselPrevious className="left-4 h-10 w-10 hidden md:inline-flex" />
+        <CarouselNext className="right-4 h-10 w-10 hidden md:inline-flex" />
       </Carousel>
       <div className="mt-4 flex justify-center gap-2">
         {Array.from({ length: count }).map((_, index) => (
@@ -94,7 +103,7 @@ export default function Banner() {
             onClick={() => api?.scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}
             className={`h-2 rounded-full transition-all duration-300 ${
-              current === index ? "w-6 bg-black" : "w-2 bg-gray-300"
+              current === index ? "w-2 md:w-6 bg-black" : "w-2 bg-gray-300"
             }`}
           />
         ))}
