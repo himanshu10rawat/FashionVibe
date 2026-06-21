@@ -12,7 +12,7 @@ export default function MobileNav() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <header className="flex items-center justify-between py-2 px-4 shadow sticky top-0 z-50 bg-whit w-full">
+      <header className="flex items-center justify-between py-2 px-4 shadow fixed top-0 left-0 z-50 bg-white w-full">
         <div className="flex items-center gap-3">
           <button
             onClick={() => setSidebarOpen(true)}

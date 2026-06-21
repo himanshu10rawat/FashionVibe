@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={geist.className}>
       <body>
         <Navbar />
-        {children}
+        <div className="mt-20">{children}</div>
       </body>
     </html>
   );
