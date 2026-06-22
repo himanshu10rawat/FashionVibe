@@ -79,7 +79,7 @@ export default function Banner() {
             <CarouselItem
               key={src}
               className={
-                "relative h-25 w-full overflow-hidden md:overflow-auto rounded-2xl md:rounded-none pl-0 md:h-100"
+                "relative h-25 w-full overflow-hidden md:overflow-auto rounded-md md:rounded-none pl-0 md:h-100 border border-gray-200 md:border-none"
               }
             >
               <Image

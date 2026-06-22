@@ -8,7 +8,7 @@ export default function BottomNavTabs() {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-around items-baseline fixed w-full bottom-0 left-0 border-t border-gray-300">
+    <div className="flex justify-around items-baseline fixed w-full bottom-0 left-0 z-50 border-t border-gray-300 bg-white">
       <Link
         className={`p-1 flex flex-col items-center gap-0.5 w-1/3 ${pathname === "/" && "text-pink-500 border-t-4 border-pink-500"}`}
         href={"/"}

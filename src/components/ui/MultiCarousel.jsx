@@ -61,7 +61,7 @@ export default function MultiCarousel() {
         {categories.map(({ src, alt, text, url }, index) => (
           <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
             <Link href={`/${url}`} className="block">
-              <div className="relative h-150 mb-3">
+              <div className="relative h-60 md:h-150 mb-3">
                 <Image
                   src={src}
                   alt={alt}
@@ -70,13 +70,15 @@ export default function MultiCarousel() {
                   className="object-cover object-top"
                 />
               </div>
-              <h3 className="font-bold text-2xl uppercase">{text}</h3>
+              <h3 className="font-bold text-lg md:text-2xl uppercase">
+                {text}
+              </h3>
             </Link>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-4 h-10 w-10 hidden md:inline-flex" />
-      <CarouselNext className="right-4 h-10 w-10 hidden md:inline-flex" />
+      <CarouselPrevious className="left-4 h-10 w-10 md:inline-flex" />
+      <CarouselNext className="right-4 h-10 w-10 md:inline-flex" />
     </Carousel>
   );
 }

@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <div className="p-10">
-        <h2 className="text-4xl mb-5 font-bold uppercase tracking-widest">
+      <div className="px-3 py-5 md:p-10">
+        <h2 className="text-xl md:text-4xl mb-2 md:mb-5 font-bold uppercase tracking-widest">
           Trending
         </h2>
         <Card />
       </div>
-      <div className="p-10">
-        <h2 className="text-4xl mb-5 font-bold uppercase tracking-widest">
+      <div className="px-3 py-5 md:p-10">
+        <h2 className="text-xl md:text-4xl mb-2 md:mb-5 font-bold uppercase tracking-widest">
           shop by category
         </h2>
         <MultiCarousel />
