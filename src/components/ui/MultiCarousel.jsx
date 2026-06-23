@@ -19,34 +19,28 @@ export default function MultiCarousel() {
       url: "western-wear",
     },
     {
-      src: "/modal-images/men1.jpg",
-      alt: "Fashion men first",
-      text: "sleepwear",
-      url: "sleepwear",
+      src: "/modal-images/women1.jpg",
+      alt: "Fashion women first",
+      text: "western wear",
+      url: "western-wear",
     },
     {
-      src: "/modal-images/women2.jpg",
-      alt: "Fashion women two",
-      text: "workwear",
-      url: "workwear",
+      src: "/modal-images/women1.jpg",
+      alt: "Fashion women first",
+      text: "western wear",
+      url: "western-wear",
     },
     {
-      src: "/modal-images/men2.jpg",
-      alt: "Fashion men two",
-      text: "eyewear",
-      url: "eyewear",
+      src: "/modal-images/women1.jpg",
+      alt: "Fashion women first",
+      text: "western wear",
+      url: "western-wear",
     },
     {
-      src: "/modal-images/women3.jpg",
-      alt: "Fashion women three",
-      text: "casualwear",
-      url: "casualwear",
-    },
-    {
-      src: "/modal-images/men3.jpg",
-      alt: "Fashion men three",
-      text: "office wear",
-      url: "office-wear",
+      src: "/modal-images/women1.jpg",
+      alt: "Fashion women first",
+      text: "western wear",
+      url: "western-wear",
     },
   ];
 
@@ -60,8 +54,11 @@ export default function MultiCarousel() {
       <CarouselContent>
         {categories.map(({ src, alt, text, url }, index) => (
           <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
-            <Link href={`/${url}`} className="block">
-              <div className="relative h-60 md:h-150 mb-3">
+            <Link
+              href={`/${url}`}
+              className="group block relative after:content-[''] after:transition-all after:ease-in-out after:duration-300 hover:after:bg-black/30 hover:after:inset-0 hover:after:absolute"
+            >
+              <div className="relative h-60 md:h-150">
                 <Image
                   src={src}
                   alt={alt}
@@ -70,7 +67,7 @@ export default function MultiCarousel() {
                   className="object-cover object-top"
                 />
               </div>
-              <h3 className="font-bold text-lg md:text-2xl uppercase">
+              <h3 className="font-bold text-white absolute -translate-1/2 left-1/2 bottom-1/2 z-10 opacity-0 text-lg w-max md:text-2xl uppercase transition-all ease-in-out duration-300 group-hover:opacity-100">
                 {text}
               </h3>
             </Link>

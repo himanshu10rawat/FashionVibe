@@ -6,18 +6,20 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <div className="px-3 py-5 md:p-10">
-        <h2 className="text-xl md:text-4xl mb-2 md:mb-5 font-bold uppercase tracking-widest">
+      <section className="px-3 py-5 md:p-10">
+        <h2 className="text-xl md:text-4xl mb-3 md:mb-8 font-bold uppercase tracking-widest">
           Trending
         </h2>
-        <Card />
-      </div>
-      <div className="px-3 py-5 md:p-10">
-        <h2 className="text-xl md:text-4xl mb-2 md:mb-5 font-bold uppercase tracking-widest">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+          <Card arrayLength={5} />
+        </div>
+      </section>
+      <section className="px-3 py-5 md:p-10">
+        <h2 className="text-xl md:text-4xl mb-3 md:mb-8 font-bold uppercase tracking-widest">
           shop by category
         </h2>
         <MultiCarousel />
-      </div>
+      </section>
     </>
   );
 }
