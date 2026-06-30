@@ -8,7 +8,7 @@ export default function ActionNav() {
         <User className="w-4 h-4 md:w-5 md:h-5 stroke-1" />
         <span className="text-xs md:text-sm">Profile</span>
       </button>
-      <Link href={""} className="flex flex-col items-center">
+      <Link href={"/wishlist"} className="flex flex-col items-center">
         <Heart className="w-4 h-4 md:w-5 md:h-5 stroke-1" />
         <span className="text-xs md:text-sm">Wishlist</span>
       </Link>
