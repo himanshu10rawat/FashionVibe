@@ -45,7 +45,7 @@ export default function LoginForm() {
             htmlFor="email"
             className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-light pointer-events-none transition-all duration-300 peer-focus:top-0 peer-focus:text-xs peer-focus:bg-white peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:bg-white"
           >
-            Enter Email
+            Enter email
           </label>
         </div>
         {errors.email && (
@@ -66,7 +66,7 @@ export default function LoginForm() {
             htmlFor="password"
             className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-light pointer-events-none transition-all duration-300 peer-focus:top-0 peer-focus:text-xs peer-focus:bg-white peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:bg-white"
           >
-            Enter Password
+            Enter password
           </label>
           <div className="absolute flex items-center right-2 top-1/2 -translate-y-1/2">
             <button
@@ -99,7 +99,10 @@ export default function LoginForm() {
             Remember Me
           </label>
         </div>
-        <Link href={""} className="text-gray-600">
+        <Link
+          href={"/auth/forgot-password"}
+          className="text-gray-600 transition-colors hover:text-pink-500"
+        >
           Forgot Password?
         </Link>
       </div>

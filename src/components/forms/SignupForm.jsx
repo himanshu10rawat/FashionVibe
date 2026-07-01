@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { SignupSchema } from "../validations/SignupSchema";
+import { signupSchema } from "../validations/signupSchema";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
@@ -17,7 +17,7 @@ export default function SignupForm() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: zodResolver(SignupSchema),
+    resolver: zodResolver(signupSchema),
     defaultValues: {
       fullName: "",
       email: "",
